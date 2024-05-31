@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2f6931005ad26e71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown full example.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting started.md",
+                "file": "Markdown full example.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting started.md",
+                "file": "Markdown full example.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting started.md"
+                "file": "Markdown full example.md"
               }
             }
           }
@@ -159,8 +171,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "494abc0a74171265",
+  "active": "2f6931005ad26e71",
   "lastOpenFiles": [
-    "Getting started.md"
+    "Getting started.md",
+    "Markdown full example.md"
   ]
 }
