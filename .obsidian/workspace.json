@@ -16,6 +16,37 @@
                 "currentVersion": "1.5.12"
               }
             }
+          },
+          {
+            "id": "52a4434752b1f546",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Creating meeting like participants grid using CSS grid.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "124494a0aaf01f05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ab957da810230dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Creating meeting like participants grid using CSS grid.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -67,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "f2a1319eeedb39de",
@@ -83,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Creating meeting like participants grid using CSS grid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Creating meeting like participants grid using CSS grid.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,7 +153,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Creating meeting like participants grid using CSS grid.md"
+              }
             }
           }
         ]
@@ -140,8 +175,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "494abc0a74171265",
+  "active": "52a4434752b1f546",
   "lastOpenFiles": [
+    "CleanShot 2024-06-02 at 14.45.44.gif",
+    "Screenshot 2024-06-02 at 14.42.58.png",
+    "Pasted image 20240602144222.png",
+    "Creating meeting like participants grid using CSS grid.md",
     "Markdown full example.md",
     "Getting started.md"
   ]
