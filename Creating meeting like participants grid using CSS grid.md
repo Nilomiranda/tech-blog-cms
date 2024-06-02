@@ -5,21 +5,21 @@ This grid will have a have a variable number of participants and you want to ren
 
 For this POC, we will have three main files.
 
-- App.tsx
+- `App.tsx`
 	- The application main's component
 	
-- Participants.tsx
+- `Participants.tsx`
 	- The component responsible for rendering the list of participants
 	
-- Participant.tsx
+- `Participant.tsx`
 	- The component responsible for rendering a single participant
 
 
 With a little less importance, as you can style your application as you see fit, we will have three style files for each component
 
-- styles.css
-- participants.css
-- participant.css
+- `styles.css`
+- `participants.css`
+- `participant.css`
 
 
 Since the main `App` component is just there to be the wrapper of our application, let's no focus to much on it. 
