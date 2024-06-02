@@ -169,8 +169,8 @@ return (
 
 And we end up with something like this:
 
-![[Screenshot 2024-06-02 at 14.42.58.png]]
+![Participants grid](https://github.com/Nilomiranda/tech-blog-cms/assets/25915040/0975b685-f941-49f2-b410-c408b7323406)
 
 See that if we have different number of participants, the grid adjusts accordingly, while keeping the aspect ratio of 16:9
 
-![[CleanShot 2024-06-02 at 14.45.44.gif]]
+![CleanShot 2024-06-02 at 14 45 44](https://github.com/Nilomiranda/tech-blog-cms/assets/25915040/ff2f4dca-14f1-4a4e-8669-6c5bb1df2807)
