@@ -22,11 +22,15 @@ At first, looks like a simple solution was on the way. Just implement a server a
 
 The problem is, that I was using the `jsonwebtoken` package to handle token signing and validation, and some internal code from that package relies on APIs available only in the node runtime.
 
+![Edge runtime problem](https://github.com/user-attachments/assets/aeb78e6b-a9a2-4997-915e-24dc329d8a9b)
+
 
 I could've used other jwt packages, such as [jose](https://github.com/panva/jose) which has operability in [Nextjs's edge runtime](https://github.com/panva/jose?tab=readme-ov-file#supported-runtimes) but I was using another package built on top of the RPC framework which also relied on node so that wouldn't solve my problem.
 
 
 **The solution** I came up with was that I could maintain my server action, but then implement a [route handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) to call it and handle the response back. That would solve the problem of runtimes since [**by default** route handlers run in the node runtime](https://nextjs.org/docs/app/building-your-application/routing/route-handlers#edge-and-nodejs-runtimes), although you can change that if you want to.
+
+![Call from route handler](https://github.com/user-attachments/assets/d53fdebd-5567-4795-90d0-fad98c76a90d)
 
 
 That's what I did, implemented the call from a route handlers and inside my middleware I would send a fetch request to that same route and handle the response I get from the API call.
@@ -40,6 +44,7 @@ This is where I was overlooking an essential web fundamental concept.
 
 Next middleware runs on the server, I was sending the request to refresh the auth token and getting the new token, while also setting the new cookie, all from within the context of running on the server, **but never on the client**.
 
+![Cookie missing in the client-browser](https://github.com/user-attachments/assets/44e188cb-8a12-4372-bb91-7113aba3f657)
 
 This means that in between the middleware handler sending the request to update the auth token, receiving the response and redirecting, or allowing the user to access a given route, the new auth token and the set of the cookie would be lost, cause that was never happening on the client. Basically, **the instructions to set the cookie stopped on the server side and never reached the client**.
 
@@ -49,3 +54,5 @@ The solution was now obvious, of course, after banging the head for "hours", at 
 
 Instead of leaving the middleware to handle that request to refresh the token, I would pass the responsibility to a component high in the components tree so the instruction coming from the response header to set the cookie would be available in the browser's context, correctly setting and updating the cookies as I needed. 
 
+
+![Sending refresh auth token request from client](https://github.com/user-attachments/assets/7e0a7b55-0d10-404c-981a-a52695f8fbfe)
