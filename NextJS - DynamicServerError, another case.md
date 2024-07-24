@@ -38,11 +38,11 @@ export async function handleAuthRedirect(req: NextRequest) {
 
 The code looks fine, but something with the usage of `nextUrl.searchParams` was causing this.
 
-What is happening, according to [this SO answer](https://stackoverflow.com/a/78010468) is that Nextjs will go through this file and notice the call to `nextUrl.searchParams` and determine that now this needs to by dynamically rendered since the code is dependant on URL params, which can't be determined ahead of time.
+**What is happening, according to [this SO answer](https://stackoverflow.com/a/78010468) is that Nextjs will go through this file and notice the call to `nextUrl.searchParams` and determine that now this needs to by dynamically rendered since the code is dependant on URL params, which can't be determined ahead of time.**
 
-Internally, to opt into dynamic render, Next will throw an error when a dynamic value is needed, catch it and the handle the logic for dynamic rendering.
+**Internally, to opt into dynamic render, Next will throw an error when a dynamic value is needed, catch it and the handle the logic for dynamic rendering.**
 
-So what's causing the problem here, is that I'm accessing `nextUrl.searchParams` inside a `try...catch` block but in the `catch` I'm not re-throwing the error anymore, removing Nextjs's capability of determining if I'm relying on dynamic values.
+**So what's causing the problem here, is that I'm accessing `nextUrl.searchParams` inside a `try...catch` block but in the `catch` I'm not re-throwing the error anymore, removing Nextjs's capability of determining if I'm relying on dynamic values.**
 
 Two possible solutions:
 
