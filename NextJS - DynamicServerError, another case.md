@@ -8,7 +8,7 @@ Dynamic server usage: Route /api/google-auth couldn't be rendered statically...
 
 that will probably be followed by a reason, like:
 
-```
+```bash
 ...because it accessed `nextUrl.searchParams`
 ```
 
