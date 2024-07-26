@@ -1,7 +1,5 @@
 name: Update production blog index
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_TEAM_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+run-name: ${{ github.actor }} is deploying to https://danmiranda.io
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -11,6 +9,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm i -g vercel
       - run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
-#      - run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
