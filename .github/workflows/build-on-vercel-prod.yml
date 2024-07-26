@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: pnpm i -g vercel
+      - run: npm i -g vercel
       - run: vercel build --prod --token ${{ secrets.VERCEL_TOKEN }}
