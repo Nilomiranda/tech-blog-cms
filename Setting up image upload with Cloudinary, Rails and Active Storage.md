@@ -1,3 +1,10 @@
+---
+year: 2023
+published: true
+description: Learn what you need to setup image upload with Cloudinary and Rails
+---
+
+
 This guide will walk you through the steps to setup simple image uploading in Rails using cloudinary service and ActiveStorage.
 
 You can reference all documentation here:
